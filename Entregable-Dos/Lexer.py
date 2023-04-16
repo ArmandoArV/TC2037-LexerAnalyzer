@@ -117,7 +117,6 @@ delimiters = specials | operators | {" ", "\n", "\t", "\r"}
 def print_table(data):
     max_lexeme_length = max([len(row[1]) for row in data])
     data = [row for row in data if row[1].strip()]
-
     # Print table header
     print("+------------+{}+------------+".format("-" * max_lexeme_length))
     print("| Token Type | Lexeme        |".format(" " * max_lexeme_length))
@@ -132,4 +131,19 @@ def print_table(data):
     # Print table footer
     print("+------------+{}+------------+".format("-" * max_lexeme_length))
 
+
+def format_table(data):
+    data = [row for row in data if row[1].strip()]
+    table = f'<table>\n'
+    # Add table header
+    table += f'<tr><th>Token Type</th><th>Lexeme</th></tr>\n'
+
+    # Add table rows
+    for row in data:
+        token_type = row[0]
+        lexeme = row[1]
+        table += f'<tr><td>{token_type}</td><td>{lexeme}</td></tr>\n'
+
+    table += '</table>'
+    return table
 
