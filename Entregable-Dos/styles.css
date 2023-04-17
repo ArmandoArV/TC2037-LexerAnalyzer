@@ -28,14 +28,32 @@ body {
 }
 
 .highlight {
-    font-weight: bold;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2%;
     width: 90%;
     font-size: 1.5rem;
-    box-shadow: 0 0 10px 0 rgb(255, 255, 255);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: var(--customGradient);
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.highlight:hover::before {
+    opacity: 1;
 }
 
 table {
@@ -49,31 +67,31 @@ table {
 
 table::before,
 table::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-  background: var(--customGradient);
-  filter: blur(5px);
-  opacity: 0;
-  transition: opacity 0.2s ease;
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: var(--customGradient);
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.2s ease;
 
 }
 
 table:hover::before,
 table:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
 table::before {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 5px 5px, calc(100% - 5px) 5px, calc(100% - 5px) calc(100% - 5px), 5px calc(100% - 5px), 5px 5px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 5px 5px, calc(100% - 5px) 5px, calc(100% - 5px) calc(100% - 5px), 5px calc(100% - 5px), 5px 5px);
 }
 
 table::after {
-  clip-path: polygon(5px 5px, calc(100% - 5px) 5px, calc(100% - 5px) calc(100% - 5px), 5px calc(100% - 5px), 5px 5px, 0 0, 100% 0, 100% 100%, 0 100%, 5px calc(100% - 5px));
+    clip-path: polygon(5px 5px, calc(100% - 5px) 5px, calc(100% - 5px) calc(100% - 5px), 5px calc(100% - 5px), 5px 5px, 0 0, 100% 0, 100% 100%, 0 100%, 5px calc(100% - 5px));
 }
 
 td, th {
@@ -85,22 +103,28 @@ td, th {
 th {
     background-color: #181a21;
     font-size: 1.5rem;
-    background-image: var(--customGradient);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: gradient 5s ease infinite;
-    background-size: 400% 400%;
+    color: #ffffff;
+
 }
 
 
-tr:nth-child(even) {
+
+tr th {
+    cursor: pointer;
+}
+
+/* Select even rows */
+tr:nth-child(even) td {
     background-color: #dddddd;
 }
 
-tr:nth-child(odd) {
+/* Select odd rows */
+tr:nth-child(odd) td {
     background-color: #ffffff;
 }
+
+
+
 
 @keyframes gradient {
     0% {
