@@ -1,5 +1,6 @@
 import os
 
+
 def get_input_files_strings():
     input_files_strings = []
     txt_files = []

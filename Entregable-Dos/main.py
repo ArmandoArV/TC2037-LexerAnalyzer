@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
         # Print the inputted text
         print("Name of the file:", filename)
-        print("Outputted text from the txt:", input_string)
+        print("Outputted text from the txt:\n", input_string)
 
         # Print pretty table
         print("Lexer analysis:")
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         with open(f"{filename}.html", "w") as output_file:
             # Add HTML head with link to external CSS file
             output_file.write(
-                f"<html><head><link rel='stylesheet' type='text/css' href='styles.css'></head><body>"
+                f"<html><head><link rel='stylesheet' type='text/css' href='styles.css'></head><body><h1 id='fileName'>File analyzed: {filename}</h1><h2 id='madeby'>Armando Arredondo Valle</h2>"
             )
 
             # Write input HTML and table HTML to file
