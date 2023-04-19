@@ -12,11 +12,15 @@ Click run in replit:
 
 ![Run Replit](RunReplit.png)
 
-## Computer:
+## PC:
+
+### For having a successfull intallation in PC, please follow this instructions:
+
 In a console execute the command:
 ```shell
 pip install -r requirements.txt
 ```
+### After, open [main.py](./Entregable-Dos/main.py)
 
 
 ## How to use it
