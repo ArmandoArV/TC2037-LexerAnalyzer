@@ -2,6 +2,8 @@
 ## LEXER FOR PYTHON LANGUAGE
 Using python creates a lexer analyzer for syntax highlight. It was made for the Implementation of Computational Methods class.
 
+## REPLIT: https://replit.com/join/hqiwbdymay-armandoarredond
+
 ## How to use it
 Simply add as many `.txt` files as you want, the analyzer will be executed in auto.
 Once added the txt, simply click execute in the `main.py` file for running the program. Once done **CHECK** the console, will be outputted your code, also check in your workspace for the HTML file.
