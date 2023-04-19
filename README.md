@@ -13,7 +13,10 @@ Click run in replit:
 ![Run Replit](RunReplit.png)
 
 ## Computer:
-
+In a console execute the command:
+```shell
+pip install -r requirements.txt
+```
 
 
 ## How to use it
