@@ -5,7 +5,7 @@ def get_input_files_strings():
     txt_files = []
     files = os.listdir()
     for file in files:
-        if file.endswith(".txt"):
+        if file.endswith(".txt") and file != "requirements.txt":
             if file in txt_files:
                 print(f"Duplicate file found: {file}. Please remove the duplicate.")
             else:
