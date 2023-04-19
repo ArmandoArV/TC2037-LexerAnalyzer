@@ -4,7 +4,7 @@ Using python creates a lexer analyzer for syntax highlight. It was made for the 
 
 ## How to use it
 Simply add as many `.txt` files as you want, the analyzer will be executed in auto.
-
+Once added the txt, simply click execute in the `main.py` file for running the program. Once done **CHECK** the console, will be outputted your code, also check in your workspace for the HTML file.
 ## Tokenization
 ```python
   matchers = [
@@ -60,5 +60,13 @@ d = a ^ b # Esto es un comentario
 | OPERATOR   | ^                       |
 | IDENTIFIER | b                       |
 | COMMENT    | # Esto es un comentario |
++------------+-----------------------+------------+
 
 ```
+
+
+### Example Output HTML
+![HTML OUTPUT](LexerHTML.png)
+
+## DFA
+![DFA](dfa_image.png)
